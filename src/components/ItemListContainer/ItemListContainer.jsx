@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getProducts, getProductsByCategory} from "../Data/Data"
-import ItemList from '../ItemList/ItemList'
+import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({saludo}) => {
@@ -19,16 +19,13 @@ const ItemListContainer = ({saludo}) => {
             console.error(error)
         })
      }, [categoryId])
-     
-    
-    
+         
     return(
-        <>
+        <div>
             <h2> {saludo} </h2>
             < ItemList products = { products } />
-        </>
+        </div>
         )
-        
-}  
+    }  
    
 export default ItemListContainer

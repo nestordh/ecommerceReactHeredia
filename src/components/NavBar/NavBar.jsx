@@ -6,14 +6,8 @@ function NavBar() {
 
     return (
         <nav className="navegador">
-            {/* <h3 className="marca">NDH Serv</h3>
-            <div className="btns">
-                <buttom className="btn"> Electronica </buttom>
-                <buttom className="btn"> Aires Acond </buttom>
-                <buttom className="btn"> Heladeras </buttom>
-                <buttom className="btn"> Lavarropas </buttom>
-            </div> */}
-            <Link to='/'>
+            
+            <Link to ='/'>
                 <h3>Mi Ecommerce</h3>
             </Link>
             <div className="Categories">
@@ -24,7 +18,7 @@ function NavBar() {
             </div>
             <CartWidget />
         </nav>
-    );
+   );
 }
 export default NavBar;
 
