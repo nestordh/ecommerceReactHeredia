@@ -19,11 +19,11 @@
     padding: 10px;
     }
 
-.card.name{ 
+.card.model{ 
     width: 100%;
     
 } 
-.cardNombre{
+.cardModel{
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
     
 }
