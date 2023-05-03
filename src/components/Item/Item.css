@@ -1,0 +1,49 @@
+
+ .cards{
+    display: -webkit-inline-flex;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    margin: 15px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid blue;
+    text-align: center;
+
+    }
+
+.card{
+    /* background-color: rgba(190, 210, 210, 0.205); */
+    width: 220px;
+    height: 320px;
+    margin: 10px;
+    padding: 10px;
+    }
+
+.card.name{ 
+    width: 100%;
+    
+} 
+.cardNombre{
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    
+}
+.cardImg{
+    max-width: 130px;
+    min-width: 130px;
+    margin: 10px;
+}
+.info{
+    text-align: center;
+    margin: 15px;
+}
+
+.detalle{
+    margin-top: 20px;
+    align-items: end;
+    /* margin-top: 20px; */
+}
+.card .detalle{
+    /* text-align: center; */
+    background-color: rgb(165, 231, 231);
+    border-radius: 10px;
+}
