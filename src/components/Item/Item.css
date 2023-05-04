@@ -2,36 +2,37 @@
  .cards{
     display: -webkit-inline-flex;
     justify-content: center;
-    /* background-color: aliceblue; */
+    background-color: transparent;
     margin: 15px;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid blue;
+    border: 3px solid  #5093a0;
     text-align: center;
-
+    
     }
 
 .card{
-    /* background-color: rgba(190, 210, 210, 0.205); */
     width: 220px;
     height: 320px;
     margin: 10px;
     padding: 10px;
+    background-color: transparent;
     }
 
 .card.model{ 
     width: 100%;
-    
-} 
+    } 
 .cardModel{
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
     
 }
 .cardImg{
-    max-width: 130px;
-    min-width: 130px;
+    width: 130px;
+    height:  130px;
     margin: 10px;
+    
 }
+
 .info{
     text-align: center;
     margin: 15px;
@@ -40,10 +41,16 @@
 .detalle{
     margin-top: 20px;
     align-items: end;
-    /* margin-top: 20px; */
 }
+
+
 .card .detalle{
-    /* text-align: center; */
     background-color: rgb(165, 231, 231);
     border-radius: 10px;
+    
+}
+.card .detalle:hover{
+    background-color: rgb(176, 174, 174);
+    transform: scale(1.2);
+
 }

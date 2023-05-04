@@ -7,9 +7,7 @@ function NavBar() {
     return (
         <nav className="navegador">
             
-            <Link to ='/'>
-                <h3>Nh Serv</h3>
-            </Link>
+            <Link to ='/'> <h3>ND Serv</h3> </Link>
             <div className="Categories">
                 <NavLink to={`/category/Heladeras`} className= {({ isActive }) => isActive ? 'ActiveOption' : 'Option'}> Heladeras </NavLink>
                 <NavLink to={`/category/Lavarropas`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}> Lavarropas </NavLink>
