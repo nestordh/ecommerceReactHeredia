@@ -1,32 +1,55 @@
+import Spinner from "react/bootstrap/Spinner"
 import { useEffect, useState } from "react"
-import { getProducts, getProductsByCategory } from "../Data/Data"
-import ItemList from "../ItemList/ItemList"
+import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
-
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from "../services/firebase/firebaseConfig"
 
 const ItemListContainer = ({saludo}) => {
-   const [ products , setProducts ] = useState([])
-   
-    const { categoryId } = useParams()
+  
+    const [products , setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    const {categoryId} = useParams()
 
    useEffect(() => {
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts
+    setLoading(true)
 
-        asyncFunc(categoryId)
-            .then ( response => {
-                setProducts ( response )
+        const collectionRef = categoryId 
+            ? query(collection(db, 'products'), where ('category', '==', categoryId))
+            : collection(db, 'products')
+
+        getDocs(collectionRef)
+        .then(response => {
+            const productsAdapted = response.docs.map(doc => {
+                const data = doc.data()
+                return  { id: doc.id, ...data }
+            })
+            setProducts(productsAdapted)
         })
-        .catch(error => {
-            console.error(error)
+        .cath(error => {
+            console.log(error)
         })
-     }, [categoryId])
-         
-    return(
-        <div>
-            <h2> {saludo} </h2>
-            < ItemList products = { products } />
+        .finally(() => {
+            setLoading(false)
+        })
+    }, [categoryId])
+       
+    if (loading){
+        return (
+          <div className='spinner'>
+            <Spinner animation="border" />;
+          </div>
+        )
+      }
+
+
+    return (
+        <div className="contenedor-titulo">
+            <h2 className="titulo"> {saludo} </h2>
+            < ItemList products={products} />
         </div>
         )
-    }  
-   
+    }
+ 
 export default ItemListContainer

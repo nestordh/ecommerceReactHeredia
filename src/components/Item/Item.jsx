@@ -1,15 +1,15 @@
 
 import { Link } from "react-router-dom"
-import './Item.css'
 
-const Item = ({id, model, price, stock, img, description}) => {
+const Item = ( {id, model, price, stock, img, description} ) => {
 
-    return( <div className="cards">
+    return (
+         <div className="cards">
         
-        <article className='card'>
+            <article className='card'>
             
             <header className='model'>
-                <h2 className='cardModel'>{model}</h2>
+                <h2 className='cardModel'> { model } </h2>
             </header>
             
             <picture>
@@ -22,8 +22,7 @@ const Item = ({id, model, price, stock, img, description}) => {
             </section>
             
             <footer className='detalle'>
-                {/* <button className='Option'>Ver Detalles</button> */}
-                <Link to = { `/item/${id} `} className='Option'> Ver detalles </Link>
+                <Link to={ `/item/${id}` } className='Option'> Ver detalles </Link>
             </footer>
 
         </article>
