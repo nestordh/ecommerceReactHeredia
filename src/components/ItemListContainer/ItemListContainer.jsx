@@ -1,4 +1,4 @@
-import Spinner from "react/bootstrap/Spinner"
+//import Spinner from "react/bootstrap/Spinner"
 import { useEffect, useState } from "react"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
@@ -27,18 +27,18 @@ const ItemListContainer = ({saludo}) => {
             })
             setProducts(productsAdapted)
         })
-        .cath(error => {
+        .catch(error => {
             console.log(error)
         })
         .finally(() => {
-            setLoading(false)
+             setLoading(false)
         })
     }, [categoryId])
        
     if (loading){
         return (
           <div className='spinner'>
-            <Spinner animation="border" />;
+            {/* <Spinner animation="border" />; */}
           </div>
         )
       }
