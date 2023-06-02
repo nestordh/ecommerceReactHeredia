@@ -38,7 +38,7 @@ const ItemListContainer = ({saludo}) => {
     if (loading){
         return (
           <div className='spinner'>
-            {/* <Spinner animation="border" />; */}
+            {/*  <Spinner animation="border" />; */}
           </div>
         )
       }

@@ -30,3 +30,6 @@ dist-ssr
 *.sln
 *.sw?
 
+/node_modules
+/.pnp
+.pnp.js

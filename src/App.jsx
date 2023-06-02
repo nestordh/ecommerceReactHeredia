@@ -8,6 +8,7 @@ import { Footer } from './components/Footer/Footer';
 import Checkout from './components/Checkout/Checkout';
 import { Cart } from './components/Cart/Cart';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { NewProduct } from './components/Product/NewProduct';
 
 
 export const App = () => {
@@ -20,11 +21,13 @@ export const App = () => {
                 <Routes>
                     <Route path = "/" element = { <ItemListContainer saludo ={'Todos nuestros productos'} /> } />
                     <Route path = "/lista" element = { <Item/> } />
-                    <Route path = "/category/:categoryId" element = { <ItemListContainer saludo ={'Productos por categoria'}/> } />
+                    <Route path = "/category/:categoryId" element = { <ItemListContainer saludo = {'Productos por categoria '} /> } />
                     <Route path = "/item/:itemId" element = { <ItemDetailContainer /> } />
                     <Route path = '/cart' element = { <Cart/> } />
                     <Route path = '/checkout' element= { <Checkout/> } />
                     <Route path = " * " element = { <h1> 404 NOT FOUND </h1> } />
+                    <Route path = '/newProduct' element = { <NewProduct/> }  Carga producto />
+
                 </Routes>
            </CartProvider>  
       <Footer/>

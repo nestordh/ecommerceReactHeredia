@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +5,54 @@
     font-family: sans-serif;
     list-style: none;
     box-sizing: border-box;
-  }  
-  .App{
+}  
+
+.App{
     background-color: rgba(255, 228, 196, 0.19);
     
-  }
-
-
-  
-  .counter{
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 100px;
+    /* position: relative; */
+    /*padding-bottom: 100px; */
+    min-height:  100vh; 
+}
+/* borde del iem list */
+.ListGroup {
+  border : solid 5px pink ;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 10px;
+}
+
+/* nav */
+.navegador{
+  background-color: #5093a0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+
+}
+.marca .Categories{
+ width: 100%;
+ text-align: start;
+ align-items: center;
+}
+
+.titulo{
+  font-size: 30px;
+  color: blueviolet;
+  text-align: center;
+}
+
+
+
+.counter{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 80px;
     border-radius: 10px;
     align-items: center;
     text-align: center;
@@ -31,42 +65,56 @@
     flex-direction: row;
     z-index: -1;
     align-items: center;
+    align-items: center;
     padding: 30px;
 }
 
-.btnC1{
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(100, 130, 180);
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
+
+/*botones*/
+.btns{
+  text-decoration: double;
 }
+
+.btn{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.btnC1{
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(100, 130, 180);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
 .btnC2{
-    display: block;
-    background-color:rgb(100, 130, 180);
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-    }
+  display: block;
+  background-color:rgb(100, 130, 180);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
 
 .btnC3{
-    background-color: rgb(100, 130, 180);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    font-size: large;
-    z-index: -1;
-    ;
+  background-color: rgb(100, 130, 180);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  z-index: -1;
 }
+
 .numContador{
     text-align: center;
 }
 
-
-
+/* Tarjetas */
 .cards{
   display: -webkit-inline-flex;
   justify-content: center;
@@ -76,8 +124,7 @@
   border-radius: 10px;
   border: 3px solid  #5093a0;
   text-align: center;
-  
-  }
+}
 
 .card{
   width: 220px;
@@ -85,20 +132,20 @@
   margin: 10px;
   padding: 10px;
   background-color: transparent;
-  }
+ }
 
-.card.model{ 
+.card .model{ 
   width: 100%;
-  } 
+} 
+
 .cardModel{
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
 }
+
 .cardImg{
   width: 130px;
   height:  130px;
   margin: 10px;
-  
 }
 
 .info{
@@ -106,29 +153,43 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 15px;
 }
 
-.detalle{
+.price{
+color: teal;
+margin: 5px,
+}
+
+.stock{
+color: green;
+margin: 5px;
+}
+.description{
+  color: black;
+  margin: 5px;
+}
+.detail{
   margin-top: 20px;
   align-items: end;
 }
 
-
-.card .detalle{
-  background-color: rgb(165, 231, 231);
+.card {
+  /* background-color: rgb(165, 231, 231); */
   border-radius: 10px;
-  
 }
-.card .detalle:hover{
-  background-color: rgb(176, 174, 174);
+
+.card .btn:hover{
+  background-color: rgb(215, 203, 203);
   transform: scale(1.2);
-
 }
 
+/* .cardBuy{
+  border-radius: solid 5px black;
+  padding: 10px;
+} */
 
 
 .ItemDetailContainer{
   background-color: rgba(245, 245, 220, 0.226);
 }
-
 
 .saludo{
   width: 100%;
@@ -136,55 +197,25 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   align-items: center;
 }
 
-
-.cards{
-  display: -webkit-inline-flex;
-  justify-content: center;
-  background-color: transparent;
-  margin: 15px;
-  align-items: center;
-  border-radius: 10px;
-  border: 3px solid  #5093a0;
-  text-align: center;
-  }
-
-.card{
-  width: 220px;
-  height: 320px;
-  margin: 10px;
-  padding: 10px;
-  background-color: transparent;
-  }
-
-.card.model{ 
-  width: 100%;
-  } 
-.cardModel{
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-  
-}
-.cardImg{
-  max-width: 130px;
-  min-width: 130px;
-  margin: 10px;
-}
-.info{
-  text-align: center;
-  margin: 15px;
+.carrito{
+    align-items: end;
+    width: 100%;
+    text-align: end;
+    margin-right: 20px;
 }
 
-.detalle{
-  margin-top: 20px;
-  align-items: end;
-}
-.card .detalle{
-  background-color: rgb(165, 231, 231);
-  border-radius: 10px;
+.dibujo{
+    background-color: rgb(255, 210, 127);
 }
 
+/* .numCarro{
+    text-align: end;
+    margin-right: 8px;
+} */
 
 
 
+/* footer */
 .pie{
   background-color:#5093a0;
   color: rgb(20, 19, 19);
@@ -194,15 +225,20 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
   gap: 10px;
   padding: 10px;
-  margin-top: 20px;
- }
+  margin-top: auto;
+  
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
 
 .pie1{
   display: flex;
   flex-direction: row;
   width: auto;
   justify-content: space-around;
-  }    
+  }  
+
 .pie2{
    margin:auto;
   padding-top: 10px;

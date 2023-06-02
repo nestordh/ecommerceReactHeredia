@@ -13,7 +13,7 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
         
-        const docRef = doc(db, 'products', itemId)
+        const docRef = doc ( db, 'products', itemId )
 
         getDoc(docRef)
           .then(response => {
@@ -33,7 +33,7 @@ export const ItemDetailContainer = () => {
       if(loading){
         return (
           <div className='spinner'>
-            <Spinner animation="border" />;
+            {/* <Spinner animation="border" />; */}
           </div>
         )
       }

@@ -1,16 +1,57 @@
+// import { useForm } from "react-hook-form"
+
+// export const Contacto = () => {
+
+//     const { register, handleSubmit } = useForm();
+
+//     const enviar = (data ) => {
+//         console.log(data)
+//     }
+
+//     return (
+  
+//         <div className='container'>
+//             <h1 className='main-title'> Contactos </h1>
+//             <form className='formulario' onSubmit={handleSubmit(enviar)} >
+                
+//                 <input type='text'
+//                        placeholder='Ingresa tu nombre'
+//                        {...register("nombre")}
+//                        />
+//                 <input 
+//                        type='email'
+//                        placeholder='Ingresa tu email'
+//                        {...register("email")}    
+//                        />
+//                 <input 
+//                        type='phone'
+//                        placeholder='Ingrese n° celular'
+//                         {...register("celular")} />
+                
+//                 <button className='enviar' type='submit'> Enviar </button>
+//             </form>
+        
+//         </div>
+//   )
+// }
+
+
 import React, { useState } from 'react'
 
 
 export const CheckoutForm = ( { onConfirm } ) => {
   const [name,setName] = useState('')
+  const [last, setLast] = useState(" ")
   const [phone, setPhone] = useState(' ')
   const [email, setEmail] = useState ('')
+  const [confirmarEmail, setConfirmarEmail] = useState ('')
   
+
   const handleConfirm = (event) => {
         event.preventDefault()
 
         const userData = {
-            name, phone, email
+            name, last, phone, email
         }
 
         onConfirm(userData)
@@ -36,7 +77,7 @@ export const CheckoutForm = ( { onConfirm } ) => {
                         type="text"
                         className='Input'
                         value= {last}
-                        onChange={({target}) => setName(target.value)} 
+                        onChange={({target}) => setLast(target.value)} 
                         />         
                 </label>
 
@@ -70,8 +111,8 @@ export const CheckoutForm = ( { onConfirm } ) => {
                     />
                 </label>
 
-                <p>* campo obligatorio</p>
-                {error && <p>{error}</p>}
+                <p>* campo obligatorio </p>
+                {/* {error && <p>{error}</p>} */}
 
                 <div className='Label'>
                     <button type='submit' className='Button'> Crear orden </button>
