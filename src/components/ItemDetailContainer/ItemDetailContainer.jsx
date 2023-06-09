@@ -3,6 +3,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../services/firebase/firebaseConfig'
+//import  Spinner from 'react-bootstrap/Spinner' 
 
 export const ItemDetailContainer = () => {
     const [ product, setProduct ] = useState(null)
@@ -40,7 +41,7 @@ export const ItemDetailContainer = () => {
 
 
       return (
-          <div className='ItemDetailContainer'>
+          <div className='Container'>
               < ItemDetail {...product} />
           </div>
     )

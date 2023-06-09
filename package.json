@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.7",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "env": "^0.0.2",
     "firebase": "^9.22.1",
     "jsx": "^0.9.89",
@@ -21,7 +21,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.0",
     "react-router-dom": "^6.11.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "scripts": "^0.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -35,5 +36,9 @@
     "sass": "^1.62.1",
     "stylus": "^0.59.0",
     "vite": "^4.3.2"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/nestordh/Ecommerce2.git",
+  "author": "nestordh <82673273+nestordh@users.noreply.github.com>",
+  "license": "MIT"
 }

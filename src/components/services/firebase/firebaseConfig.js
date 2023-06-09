@@ -9,7 +9,7 @@ const firebaseConfig = {
     // projectId: process.env.REACT_APP_projectId,
     // storageBucket: process.env.REACT_APP_storageBucket,
     // messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    // appId: process.env.REACT_APP_appId,
+    // appId: process.env.REACT_APP_appId
  
  
   apiKey: "AIzaSyBnwiOznSKbKXQ8m3uTeCqKVFRfaRDq_x0",
@@ -18,8 +18,7 @@ const firebaseConfig = {
   storageBucket: "miecommerce-d7505.appspot.com",
   messagingSenderId: "567725635412",
   appId: "1:567725635412:web:749a9e531683e312b57ac1",
-  measurementId: "G-3G0PCDEX7F"
-};
+ };
 
 
 const app = initializeApp(firebaseConfig);

@@ -5,37 +5,40 @@ import { CartContext } from '../CartContext/CartContext'
 
 
 export const Cart = () => {
-  const { cart, clearCart, cartQuantity, total } = useContext(CartContext) ;
+  const { cart, clearCart, cartQuantity, priceTotal } = useContext(CartContext) ;
 
-  if(cartQuantity() === 0 ) {
-    
-    return(
+  (cartQuantity() === 0 ) 
+
+ ?   
+  
+ (
         <>
-            <h1> No hay productos en el carrito </h1>
-            <Link to='/' className='Option'> Ir a Productos para seleccionar </Link>               
+            <h1 className='titulo'> No hay productos en el carrito </h1>
+            <Link to='/' className='titulo2'> Ir a Productos para seleccionar </Link>               
         </>
     )
-  }
+ 
 
-  return (
-    <div className='carrito'>
-        <div className='div-carrito1'>
+:
+
+ (
+    <div className='contenedor'>
+       <div className='carrito'>
            { cart.map (p => < CartItem key={p.id} {...p} />)}
         </div>
        
         <div className='div-carrito'>
              {/* <h3 className='titulo'> Total: ${cartTotal()}</h3> */}
-             <h3 className='titulo'> Total: $ { total } </h3>
+             <h3 className='titulo'> Total: $ { priceTotal } </h3>
 
             <button 
                 onClick={ () => clearCart ()}
-                className='boton-carrito'>
+                className='btn'>
                     Vaciar carrito
             </button>
 
-            <Link to='/checkout' className='boton-carrito1'> Generar Compra </Link>
-       
-        </div>
+            <Link to='/checkout' className='btn'> Empezar Compra </Link>
+       </div>
     </div>
   )
-}
+ }

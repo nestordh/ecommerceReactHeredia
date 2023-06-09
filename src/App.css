@@ -9,13 +9,11 @@
 
 .App{
     background-color: rgba(255, 228, 196, 0.19);
-    
     display: flex;
     flex-direction: column;
-    /* position: relative; */
-    /*padding-bottom: 100px; */
     min-height:  100vh; 
 }
+
 /* borde del iem list */
 .ListGroup {
   border : solid 5px pink ;
@@ -26,31 +24,83 @@
 
 /* nav */
 .navegador{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #5093a0;
   width: 100%;
   height: auto;
   padding: 10px;
   text-align: center;
   align-items: center;
+}
 
+.ItemDetailContainer{
+  background-color: aquamarine;
+display: flex;
+position: relative;
+align-items: center;
 }
-.marca .Categories{
- width: 100%;
- text-align: start;
- align-items: center;
+
+.contenedorCarrito{
+background-color: #5093a0;
 }
+
+.carrito{
+  align-items: end;
+  width: 100%;
+  text-align: end;
+  margin-right: 20px;
+  padding: 30px;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.dibujo{
+  background-color: rgb(255, 210, 127);
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  align-items: center;
+}
+
+.categories{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+
+    
+ }
 
 .titulo{
-  font-size: 30px;
+  font-size: 35px;
   color: blueviolet;
   text-align: center;
+  margin-top: 25px;
 }
 
+.titulo2{
+  font-size: 25px;
+  color: chocolate;
+  text-align: center;
+  margin: 25px;
+}
 
 
 .counter{
     display: flex;
-    flex-direction: column;
+    background-color: azure;
+    flex-direction: row;
     width: 100px;
     height: 80px;
     border-radius: 10px;
@@ -58,6 +108,7 @@
     text-align: center;
     gap: 5px;
     margin: auto;
+    color: black;
 }
 .controles{
     width: 100%;
@@ -75,11 +126,30 @@
   text-decoration: double;
 }
 
+.btnActiv{
+  display: inline-block;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #264572;
+  height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .btn{
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
-  margin: 10px;
+  margin: 5px;
+}
+
+.btnLg{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  color: gray;
 }
 
 .btnC1{
@@ -132,8 +202,8 @@
   margin: 10px;
   padding: 10px;
   background-color: transparent;
- }
-
+  border-radius: 10px;
+}
 .card .model{ 
   width: 100%;
 } 
@@ -171,24 +241,19 @@ margin: 5px;
   align-items: end;
 }
 
-.card {
-  /* background-color: rgb(165, 231, 231); */
-  border-radius: 10px;
-}
+
 
 .card .btn:hover{
   background-color: rgb(215, 203, 203);
   transform: scale(1.2);
 }
 
-/* .cardBuy{
-  border-radius: solid 5px black;
-  padding: 10px;
-} */
-
 
 .ItemDetailContainer{
-  background-color: rgba(245, 245, 220, 0.226);
+  background-color: aquamarine;
+display: flex;
+position: relative;
+align-items: center;
 }
 
 .saludo{
@@ -196,23 +261,6 @@ margin: 5px;
   text-align: center;
   align-items: center;
 }
-
-.carrito{
-    align-items: end;
-    width: 100%;
-    text-align: end;
-    margin-right: 20px;
-}
-
-.dibujo{
-    background-color: rgb(255, 210, 127);
-}
-
-/* .numCarro{
-    text-align: end;
-    margin-right: 8px;
-} */
-
 
 
 /* footer */
@@ -227,9 +275,6 @@ margin: 5px;
   padding: 10px;
   margin-top: auto;
   
-  /* position: absolute;
-  bottom: 0;
-  width: 100%; */
 }
 
 .pie1{

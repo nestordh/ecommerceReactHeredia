@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
     const  [cart, setCart] = useState([]);
 
     const addItem = (item, quantity) => {
-        if(!isInCart(item.id)){                                     //inCart
+        if(!isInCart(item.id)){                                     
             setCart (prev => [...prev, {...item, quantity }])
         } else {
             console.error('El producto ya fue agregado')
@@ -32,13 +32,13 @@ export const CartProvider = ({ children }) => {
         return cart.reduce((acc, prod) => (acc += prod.quantity), 0);
     };
 
-    // const cartTotal = () => {
-    const total = () => {
+     const priceTotal = () => {
+    //const total = () => {
         return cart.reduce((acc, prod) => (acc += prod.price * prod.quantity), 0);
     };
 
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, isInCart, cartQuantity, total }}> 
+        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, isInCart, cartQuantity, priceTotal }}> 
             {children}
         </CartContext.Provider>   
     )

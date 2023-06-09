@@ -8,20 +8,25 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     
     const increment = () => (quantity < stock) && (setQuantity(quantity + 1));
 
-//correcciones ok
+//correcciones ver
 
     return (
+        <div div className=" ListGroup">
         
         <div className="counter">
             
             <div className="controles">
-                <button type='button' className="btnC1" onClick = {decrement} > - </button>
+                <button className="btnC1" onClick={decrement} >-</button>
                 <h5 className="numContador"> { quantity } </h5>
-                <button type='button' className="btnC2" onClick = {increment} > + </button>
+                <button className="btnC2" onClick={increment} >+</button>
             </div>
             
-            <button className="btnC3" onClick={() => onAdd(quantity)}  disabled={!stock}> Agregar al carrito </button>
+            <button 
+                className="btnC3" onClick={() => onAdd(quantity)}  disabled={!stock}> Agregar al carrito
+            </button>
             
+        </div>
+       
         </div>
     );
 }
